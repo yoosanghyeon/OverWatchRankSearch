@@ -14,7 +14,7 @@
 - 그 외 : ButterKnife
 
 ### 오버워치 전적 검색 앱 이미지
-[![OverWatch Image](http://i.imgur.com/5qiLHPR.png)
+![OverWatch Image](http://i.imgur.com/5qiLHPR.png)
 
 ### 클라이언트 개발자
 - 유상현
