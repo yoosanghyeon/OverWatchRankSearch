@@ -19,8 +19,8 @@ public class RetroficCreator {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient client = new OkHttpClient.Builder().
-                readTimeout(60, TimeUnit.MINUTES).
-                connectTimeout(60, TimeUnit.MINUTES).
+                readTimeout(15, TimeUnit.MINUTES).
+                connectTimeout(15, TimeUnit.MINUTES).
                 addInterceptor(interceptor).build();
 
         return new Retrofit.Builder()

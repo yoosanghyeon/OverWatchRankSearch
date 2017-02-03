@@ -39,13 +39,6 @@ public class UserSearchFragment extends Fragment implements View.OnClickListener
         return fragment;
     }
 
-    public static UserSearchFragment newInstance(String param1, String param2) {
-        UserSearchFragment fragment = new UserSearchFragment();
-        Bundle args = new Bundle();
-        fragment.setArguments(args);
-        return fragment;
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
