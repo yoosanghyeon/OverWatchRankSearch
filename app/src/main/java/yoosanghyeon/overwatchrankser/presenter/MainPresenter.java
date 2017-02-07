@@ -39,6 +39,7 @@ public class MainPresenter implements MainContract.Presenter{
                 if (!response.isSuccessful()) {
                     view.showFaidLoad();
                     view.hideProgressbar();
+                    view.showEmptyVIew();
                     return;
                 }
 

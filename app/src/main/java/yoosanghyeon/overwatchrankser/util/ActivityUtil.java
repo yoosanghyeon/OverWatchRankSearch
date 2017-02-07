@@ -22,8 +22,8 @@ public class ActivityUtil {
         return activityUtil;
     }
 
-    public void replaceToActivityFragment(@NonNull FragmentManager manager, Fragment fragment
-            , int fragmentId) {
+    public void replaceToActivityFragment(@NonNull FragmentManager manager, @NonNull Fragment fragment
+            , @NonNull int fragmentId) {
 
         manager.beginTransaction()
                 .replace(fragmentId, fragment)

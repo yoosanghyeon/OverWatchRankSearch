@@ -76,7 +76,7 @@ public class GameStatus {
     public Integer medalsSilver;
 
     @SerializedName("time_played")
-    public Integer timePlayed;
+    public Float timePlayed;
 
     @SerializedName("objective_kills")
     public Integer objectiveKills;
