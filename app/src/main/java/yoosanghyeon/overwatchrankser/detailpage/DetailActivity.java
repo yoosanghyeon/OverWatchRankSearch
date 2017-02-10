@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -33,7 +34,7 @@ public class DetailActivity extends AppCompatActivity implements MainContract.Vi
     @BindView(R.id.rl_progress_view)
     RelativeLayout rlProgressView;
 
-    // 데이터가 없을때 사용
+    // 데이터가 없을때 사용 보여줄 view
     @BindView(R.id.empty_view)
     RelativeLayout emptyView;
 
@@ -60,9 +61,6 @@ public class DetailActivity extends AppCompatActivity implements MainContract.Vi
         detailToolbar.setTitle(battleTag.concat(" 님 경쟁전 전적"));
         setSupportActionBar(detailToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
-
         adapter = new RankAdapter(this);
 
         manager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
@@ -95,12 +93,15 @@ public class DetailActivity extends AppCompatActivity implements MainContract.Vi
     @Override
     public void showProgressbar() {
         rlProgressView.setVisibility(View.VISIBLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
+                WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
         Log.e("showProgressbar", "showProgressbar");
     }
 
     @Override
     public void hideProgressbar() {
         rlProgressView.setVisibility(View.GONE);
+        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
         Log.e("hideProgressba", "hideProgressba");
     }
 
