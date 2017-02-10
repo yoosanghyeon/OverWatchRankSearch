@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     FragmentManager manager;
     int versionCode;
-    private static final int LATELY_VERSION_CODE = 2;
+    private static final int LATELY_VERSION_CODE = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             PackageInfo pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
             versionCode = pInfo.versionCode;
-            if (versionCode <= LATELY_VERSION_CODE){
+            if (LATELY_VERSION_CODE > versionCode){
                 UpdataDialogFragment newFragment = UpdataDialogFragment.newInstance();
                 newFragment.show(getSupportFragmentManager(),"tag");
             }
