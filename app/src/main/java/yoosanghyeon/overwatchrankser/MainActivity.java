@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         manager = getSupportFragmentManager();
         ActivityUtil.getInstance().replaceToActivityFragment
-                (manager, UserSearchFragment.newInstance(),R.id.fragment_id);
+                (manager, UserSearchFragment.newInstance(null),R.id.fragment_id);
 
     }
 

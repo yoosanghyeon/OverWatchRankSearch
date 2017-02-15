@@ -34,8 +34,10 @@ public class UserSearchFragment extends Fragment implements View.OnClickListener
     }
 
 
-    public static UserSearchFragment newInstance() {
+    public static UserSearchFragment newInstance(@Nullable Bundle bundle) {
         UserSearchFragment fragment = new UserSearchFragment();
+        if (bundle != null){
+        }
         return fragment;
     }
 

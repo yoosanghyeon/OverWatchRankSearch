@@ -70,6 +70,7 @@ public class RankItemView extends RecyclerView.ViewHolder {
 
     public void bindView(UserRankData data) {
 
+
         server_name.setText(""+data.serverName);
         tire.setText(""+data.stats.competitive.overallStats.tier);
         score.setText(""+data.stats.competitive.overallStats.comprank);
